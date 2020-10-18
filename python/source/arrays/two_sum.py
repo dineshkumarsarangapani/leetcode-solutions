@@ -12,7 +12,7 @@ class Solution:
                 return [sums[diff], j]
             else:
                 sums[nums[j]] = j
-        
+
 
 
 if __name__ == '__main__':
