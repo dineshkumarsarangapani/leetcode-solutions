@@ -24,6 +24,6 @@ class Solution:
 if __name__ == '__main__':
     s = Solution()
     nums = [2, 1, 4, 12, 545, 12, 14]
-    nums.sort() 
+    nums.sort()
     index = s.search(nums, 545)
     print(index)
