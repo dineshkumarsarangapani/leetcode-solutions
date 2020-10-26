@@ -16,10 +16,10 @@ class Solution:
             fast_pointer = fast_pointer.next.next
             slow_pointer = slow_pointer.next
             if fast_pointer == slow_pointer:
-                slow2 = head;
+                slow2 = head
                 while slow2 != slow_pointer:
-                    slow_pointer = slow_pointer.next;
-                    slow2 = slow2.next;
-                return slow_pointer;
+                    slow_pointer = slow_pointer.next
+                    slow2 = slow2.next
+                return slow_pointer
 
         return None
