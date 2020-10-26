@@ -1,11 +1,4 @@
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-    def add_node(self, node):
-        self.next = node
+from python.source.linked_list.linked_list import ListNode
 
 
 class Solution:
@@ -15,8 +8,6 @@ class Solution:
         :rtype: void Do not return anything, modify node in-place instead.
         """
         # Since it is not tail node, it could be head node.
-
-
 
 
 def print_node(node):
