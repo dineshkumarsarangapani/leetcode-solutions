@@ -29,12 +29,25 @@ class Solution:
                 visit(node.left, li)
                 visit(node.right, li)
 
-        a = []
-        visit(root, a)
-        return a
+        visited = []
+        visit(root, visited)
+        return visited
+
+
+class LoopSolution:
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        li =[]
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            if node:
+                li.append(node.val)
+                stack.append(node.left)
+                stack.append(node.right)
+        return li
 
 
 if __name__ == '__main__':
-    s = Solution()
+    s = LoopSolution()
     y = s.preorderTraversal(get_tree())
     print(y)
