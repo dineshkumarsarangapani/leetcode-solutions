@@ -30,18 +30,23 @@ def get_tree():
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        if not root:
+            return []
         visited = []
-        q = [root]
-        while q:
+        q = SimpleQueue()
+        q.put(root)
+        while not q.empty():
             current_level = []
-            size = len(q) # Find the size of the Q to loop through all current level items.
+            size = q.qsize()
             for i in range(size):
-                node = q.pop()
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-                current_level.append(node.val)
+                node = q.get()
+                if node:
+                    current_level.append(node.val)
+                    if node.left:
+                        q.put(node.left)
+                    if node.right:
+                        q.put(node.right)
+
             visited.append(current_level)
 
         return visited
