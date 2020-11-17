@@ -8,19 +8,19 @@ import sys
 
 # Complete the minimumBribes function below.
 def minimumBribes(q):
-    #print(q)
     global_mini = 0
-    for i in range(0, len(q)-1):
-        #print(q[i] - q[i+1])
-        if q[i] - q[i+1] > 2:
+    for i in range(0, len(q)):
+        # print(q[i] - q[i+1])
+        if q[i] - (i + 1) > 2:
             print("Too chaotic")
             return
-        p = q[i]
-        for j in range(max(p-1,0), i):
-            if q[j] > p:
+        j = max(0, q[i] - 2)
+        while (j < i):
+            if q[j] > q[i]:
                 global_mini += 1
-
+            j += 1
     print(global_mini)
+
 
 if __name__ == '__main__':
     t = int(input())
