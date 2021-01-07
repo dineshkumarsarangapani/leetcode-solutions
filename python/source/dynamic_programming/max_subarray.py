@@ -16,4 +16,5 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    s.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+    a = s.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+    print(a)
